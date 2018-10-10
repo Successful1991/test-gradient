@@ -4,12 +4,22 @@
 html{
   background: #ffffff;
 }
+@keyframes animate-bg {
+  to{
+    background-position: 110% 100%, -50% -20%, 100% 10%, 100% 100%;
+  }
+}
 body{
-  height: 680px;
+  height: 100vh;
   margin: 0;
   padding: 45px 55px 0;
-  background: url("../img/Фон.png")no-repeat center;
-  background-size: cover;
+  background:
+          url('../img/bg3.png')no-repeat right top,
+          url('../img/bg1.png')no-repeat left center,
+          url('../img/bg2.png')no-repeat right bottom,
+          linear-gradient(90deg, #99419a 0,#d4436c 50%, #eaa230 100%);
+  background-size: contain;
+  animation: animate-bg 30s linear infinite alternate;
 }
 
 h1{

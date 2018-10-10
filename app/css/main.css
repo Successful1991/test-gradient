@@ -6,12 +6,25 @@
 html {
   background: #ffffff; }
 
+@-webkit-keyframes animate-bg {
+  to {
+    background-position: 110% 100%, -50% -20%, 100% 10%, 100% 100%; } }
+
+@keyframes animate-bg {
+  to {
+    background-position: 110% 100%, -50% -20%, 100% 10%, 100% 100%; } }
+
 body {
-  height: 680px;
+  height: 100vh;
   margin: 0;
   padding: 45px 55px 0;
-  background: url("../img/Фон.png") no-repeat center;
-  background-size: cover; }
+  background: url("../img/bg3.png") no-repeat right top, url("../img/bg1.png") no-repeat left center, url("../img/bg2.png") no-repeat right bottom, -webkit-gradient(linear, left top, right top, color-stop(0, #99419a), color-stop(50%, #d4436c), to(#eaa230));
+  background: url("../img/bg3.png") no-repeat right top, url("../img/bg1.png") no-repeat left center, url("../img/bg2.png") no-repeat right bottom, -webkit-linear-gradient(left, #99419a 0, #d4436c 50%, #eaa230 100%);
+  background: url("../img/bg3.png") no-repeat right top, url("../img/bg1.png") no-repeat left center, url("../img/bg2.png") no-repeat right bottom, -o-linear-gradient(left, #99419a 0, #d4436c 50%, #eaa230 100%);
+  background: url("../img/bg3.png") no-repeat right top, url("../img/bg1.png") no-repeat left center, url("../img/bg2.png") no-repeat right bottom, linear-gradient(90deg, #99419a 0, #d4436c 50%, #eaa230 100%);
+  background-size: contain;
+  -webkit-animation: animate-bg 30s linear infinite alternate;
+          animation: animate-bg 30s linear infinite alternate; }
 
 h1 {
   font-family: "Gotham Pro Black";
